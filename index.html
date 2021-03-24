@@ -75,9 +75,11 @@
         }
         #line{
             width: 50px;
-            height: 100vh;
-            background-image: url(./img/linee.png);
+            height: 200vh;
+            /* background-image: url(./img/linee.png); */
             background-size: 100%;
+            transition: 0.5s ease-in-out;
+            animation: wind 0.5s ease-in-out infinite alternate;
         }
         /* Custom */
         .translateXr250{
@@ -91,6 +93,15 @@
         }
         .actionact{
             transform: scale(1.2) rotate(30deg);
+        }
+        /* 動畫 */
+        @keyframes wind{
+            0%,100%{
+                background-image: url(./img/linee.png);
+            }
+            50%{
+                background-image: url(./img/linee2.png);
+            }
         }
         
         
@@ -131,7 +142,7 @@
                     <img src="./img/fish1.png" alt="MDN">
                 </picture>
             </div>
-            <div data-depth="0.6" class="layer">
+            <div data-depth="0.1" class="layer">
                 <picture>
                     <source srcset="./img/ll.png" media="(max-width: 576px)">
                     <source srcset="./img/la22.png" media="(max-width: 992px)">
@@ -204,7 +215,7 @@
 
 
     <script>
-        // 
+        //  按鍵action
         var butoall = document.getElementById('butoall').children;
         // 
         var butofishall = document.getElementById('butofish').children[0].children;
@@ -223,18 +234,27 @@
         }
         for(i=0;i<butofishall.length;i++){
             butofishall[i].index=i;
-            console.log(butofishall[i])
             butofishall[i].addEventListener('click',function(){
                 for(j=0;j<butofishall.length;j++){
                     butoall[j].classList.remove('actionact')
                     butofishall[j].classList.remove('actionact')
                 }
-                console.log(event.target.parentNode.dataset.name)
-                console.log(event.target)
                 event.target.parentNode.parentNode.classList.add('actionact')
             })
 
         }
+        // 風旗
+        var line = document.getElementById('line');
+        let nowScroll = 0;
+        window.addEventListener('scroll',function(){
+            if(nowScroll<scrollY){
+                line.style.backgroundPositionY=Math.floor((nowScroll-scrollY)*2)+'%'
+                // console.log(window.getComputedStyle(line).getPropertyValue('background-position'))
+            }else{
+                line.style.backgroundPositionY=Math.floor((nowScroll-scrollY)*2)+'%'
+            }
+            nowScroll=scrollY;
+        })
         
         // 漢堡選單
         var hamburger = document.getElementById('hamburger');
