@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- lightbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.css">
+
+    <!-- parallax.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    
+    <!-- icon -->
+    <link rel="icon" href="./img/icon.png" type="image/x-icon">
+    
+    <title>PING TUNG漁節</title>
+    <style>
+        body{
+            background-color: #fff901;
+            background-image: url(./img/bg.png);
+        }
+        #nav{
+            width: 100%;
+            height: 100px;
+            z-index: 100;            
+        }
+        #header{
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background-color: #fff901;
+        }
+        .logo{
+            margin-left: 50px;
+        }
+        .buto{
+            margin-right: 30px;
+        }
+        .butofish{
+            position: fixed;
+            top: 30%;
+            right: 0;
+            transition: 0.3s ease-in-out;
+        }
+        .layer{
+            width: 100%;
+            height: 100%;
+        }
+        .layer img{
+            width: 100%;
+            height: 100%;
+            /* object-fit: cover;
+            object-position: center; */
+        }
+        section{
+            width: 100%;
+        }
+        #about{
+            background-color: aquamarine;
+            background-color: rgb(201, 247, 231);
+            background-image: url(./img/bg1.png);
+        }
+        #activity{
+            background-color: steelblue;
+        }
+        .map{
+            height: 450px;
+        }
+        footer{
+            background-color: #fff;
+        }
+        #line{
+            width: 50px;
+            height: 100vh;
+            background-image: url(./img/linee.png);
+            background-size: 100%;
+        }
+        /* Custom */
+        .translateXr250{
+            transform: translateX(250px);
+        }
+        .cu-pointer{
+            cursor: pointer;
+        }
+        .h500{
+            height: 500px;
+        }
+        .actionact{
+            transform: scale(1.2) rotate(30deg);
+        }
+        
+        
+    </style>
+  </head>
+  <body>
+      <nav id="nav" class="position-fixed top-0 start-0 d-flex justify-content-between align-items-center">
+          <div class="logo"><a href="#header" class="text-decoration-none"><img src="./img/logo.png" alt="" width="60px"></a></div>
+          <ul id="butoall" class="list-unstyled d-none d-md-flex ">
+              <li class="buto"><a data-name="about" href="#about" class="text-decoration-none position-relative"><img src="./img/button3.png" alt="" width="100px"><img src="./img/c.png" alt="" class="position-absolute top-50 start-0 translate-middle-y" width="100px"></a></li>
+              <li class="buto"><a href="#activity" class="text-decoration-none position-relative"><img src="./img/button3.png" alt="" width="100px"><img src="./img/a.png" alt="" class="position-absolute top-50 start-0 translate-middle-y" width="100px"></a></li>
+              <li class="buto"><a href="#info" class="text-decoration-none position-relative"><img src="./img/button3.png" alt="" width="100px"><img src="./img/b.png" alt="" class="position-absolute top-50 start-0 translate-middle-y" width="100px"></a></li>
+          </ul>
+          <!-- 漢堡選單 -->
+          <div id="hamburger" class="hamburger d-md-none cu-pointer">
+              <div class=""><img src="./img/ham.png" alt=""></div>
+              <div class="d-none"><img src="./img/ham2.png" alt=""></div>
+          </div>
+          <div id="butofish" class="butofish translateXr250 d-md-none">
+            <ul class="list-unstyled">
+                <li class="buto mb-5"><a href="#about" class="text-decoration-none position-relative"><img src="./img/button3.png" alt="" width="100px"><img src="./img/c.png" alt="" class="position-absolute top-50 start-0 translate-middle-y" width="100px"></a></li>
+                <li class="buto mb-5"><a href="#activity" class="text-decoration-none position-relative"><img src="./img/button3.png" alt="" width="100px"><img src="./img/a.png" alt="" class="position-absolute top-50 start-0 translate-middle-y" width="100px"></a></li>
+                <li class="buto mb-5"><a href="#info" class="text-decoration-none position-relative"><img src="./img/button3.png" alt="" width="100px"><img src="./img/b.png" alt="" class="position-absolute top-50 start-0 translate-middle-y" width="100px"></a></li>
+            </ul>
+          </div>
+      </nav>
+      <header>
+        <div data-relative-input="true" id="header">
+            <div data-depth="0.8" class="layer">
+                <picture>
+                    <source srcset="./img/la11.png" media="(max-width: 992px)">
+                    <img src="./img/la1.png" alt="MDN">
+                </picture>
+            </div>
+            <div data-depth="0.4" class="layer">
+                <picture>
+                    <source srcset="./img/la4.png" media="(max-width: 576px)">
+                    <img src="./img/fish1.png" alt="MDN">
+                </picture>
+            </div>
+            <div data-depth="0.6" class="layer">
+                <picture>
+                    <source srcset="./img/ll.png" media="(max-width: 576px)">
+                    <source srcset="./img/la22.png" media="(max-width: 992px)">
+                    <img src="./img/fish2.png" alt="MDN">
+                </picture>
+            </div>
+            <div data-depth="0.8" class="layer">
+                <picture>
+                    <source srcset="./img/la3.png" media="(max-width: 576px)">
+                    <img src="./img/fish3.png" alt="MDN">
+                </picture>
+            </div>
+        </div>
+      </header>
+      <section id="about" class="p-5">
+          <div class="container my-3"><img src="./img/c.png" alt="" width="150px"></div>  
+          <div class="container my-5">
+              <div class="row">
+                  <div class="col-12 col-lg-6">
+                      <p class="h4 my-4">鮪魚盛產季節為每年4-6月，黑鮪魚全身都是寶。 肚子的魚肉是生魚片的極品，媲美冰淇淋入口即化，背部是台灣松板，乾煎後口感柔軟有如松板牛肉，下巴適合香烤，魚頭用來燉湯或清蒸。</p>
+                      <p class="h4 my-4">本區所屬漁船大多數為遠近海作業，沿岸次之，少部分為河沼，養殖漁民亦佔不少，計有動力漁船1,185艘、舢舨47艘、漁筏355艘，合計大小漁船數1,587艘。遠、近海漁獲物大部分為鮪魚、旗魚、劍旗魚、鬼頭刀魚、白帶魚、加納魚、鯊魚、雜魚等。</p>
+                  </div>
+                  <div class="col-12 col-lg-6">
+                      <img src="./img/fishhead2.png" alt="" class="img-fluid">
+                  </div>
+              </div>
+          </div>
+
+      </section>
+      <section id="activity" class="p-5">
+        <div class="container text-end my-3"><img src="./img/a.png" alt="" width="150px"></div>
+        <div class="container my-5">
+            <div class="row">
+                <div class="col-12 col-lg-5">
+                    <img src="./img/fishhead5.png" alt="" class="img-fluid">
+                </div>
+                <div class="col-12 col-lg-7">
+                    <ul class="list-unstyled d-flex">
+                        <li><a href="img/market.jpeg" data-lightbox="文創市集" data-title="文創市集"><img src="./img/act1.png" alt="" class="img-fluid"></a></li>
+                        <li><a href="img/market2.jpeg" data-lightbox="漁市文化" data-title="漁市文化"><img src="./img/act2.png" alt="" class="img-fluid"></a></li>
+                        <li><a href="img/market3.jpeg" data-lightbox="表演記憶" data-title="表演記憶"><img src="./img/act5.png" alt="" class="img-fluid"></a></li>
+                        <li><a href="img/market4.jpeg" data-lightbox="地方特產" data-title="地方特產"><img src="./img/act3.png" alt="" class="img-fluid"></a></li>
+                        <li><a href="img/market1.jpeg" data-lightbox="職人匠心" data-title="職人匠心"><img src="./img/act4.png" alt="" class="img-fluid"></a></li>                    </ul>
+                </div>
+            </div>
+        </div>  
+
+      </section>
+      <section id="info" class="p-5">
+          <div class="container my-3"><img src="./img/b.png" alt="" width="150px"></div>
+          <div class="container my-5">
+              <div class="row">
+                  <div class="col-12 col-lg-5">
+                    <img src="./img/fishhead6.png" alt="" class="img-fluid">
+                  </div>
+                  <div class="col-12 col-lg-7">
+                    <iframe class="w-100 map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9157.278777112262!2d120.44469548840927!3d22.469391469535044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3471e18f8d367ea7%3A0x36c27f3352f7c7a4!2z5p2x5riv5ryB5riv5ryB55Si5ZOB55u06Yq35Lit5b-D77yI6I-v5YOR5biC5aC077yJ!5e0!3m2!1szh-TW!2stw!4v1616506974121!5m2!1szh-TW!2stw" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+              </div>
+          </div>
+      </section>
+      <footer class="py-3">
+          <div class="container text-center my-3">
+              <h5>24小時免付費旅遊諮詢熱線：0800-01XXXX</h5>
+              <h6>Copyright © 2030</h6>
+          </div>
+      </footer>
+      <section id="line" class="position-fixed top-0 start-0"></section>
+      
+
+
+    <script>
+        // 
+        var butoall = document.getElementById('butoall').children;
+        // 
+        var butofishall = document.getElementById('butofish').children[0].children;
+        for(i=0;i<butoall.length;i++){
+            butoall[i].index=i;
+            butoall[i].addEventListener('click',function(){
+                for(j=0;j<butoall.length;j++){
+                    butoall[j].classList.remove('actionact')
+                    butofishall[j].classList.remove('actionact')
+                }
+                // console.log(event.target.parentNode.dataset.name)
+                // console.log(event.target)
+                event.target.parentNode.parentNode.classList.add('actionact')
+            })
+
+        }
+        for(i=0;i<butofishall.length;i++){
+            butofishall[i].index=i;
+            console.log(butofishall[i])
+            butofishall[i].addEventListener('click',function(){
+                for(j=0;j<butofishall.length;j++){
+                    butoall[j].classList.remove('actionact')
+                    butofishall[j].classList.remove('actionact')
+                }
+                console.log(event.target.parentNode.dataset.name)
+                console.log(event.target)
+                event.target.parentNode.parentNode.classList.add('actionact')
+            })
+
+        }
+        
+        // 漢堡選單
+        var hamburger = document.getElementById('hamburger');
+        var butofish = document.getElementById('butofish');
+        hamburger.addEventListener('click',function(){            
+            hamburger.children[0].classList.toggle('d-none');
+            hamburger.children[1].classList.toggle('d-none');
+            butofish.classList.toggle('translateXr250');
+        })
+
+        // Parallax.js
+        var scene = document.getElementById('header');
+        var parallaxInstance = new Parallax(scene, {
+        relativeInput: true
+        });
+    </script>
+
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    -->
+
+    <!-- lightbox -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.js"></script>
+
+  </body>
+</html>
